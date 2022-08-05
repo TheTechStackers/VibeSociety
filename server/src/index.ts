@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
-import { EventResolver } from './resolvers/Event';
+import { HelloResolver } from './resolvers/Hello';
 import cors from 'cors';
 
 const main = async () => {
@@ -12,7 +12,7 @@ const main = async () => {
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
-      resolvers: [EventResolver],
+      resolvers: [HelloResolver],
       validate: false,
     }),
     introspection: true,
