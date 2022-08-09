@@ -1,12 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `untitled_table` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "untitled_table";
-
 -- CreateTable
 CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
@@ -18,14 +9,15 @@ CREATE TABLE "User" (
 );
 
 -- CreateTable
-CREATE TABLE "Event" (
+CREATE TABLE "Show" (
     "id" SERIAL NOT NULL,
     "title" TEXT NOT NULL,
-    "content" TEXT,
-    "published" BOOLEAN NOT NULL DEFAULT false,
-    "authorId" INTEGER NOT NULL,
+    "description" TEXT NOT NULL,
+    "location" TEXT NOT NULL,
+    "artist" TEXT NOT NULL,
+    "imageURL" TEXT NOT NULL,
 
-    CONSTRAINT "Event_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Show_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex

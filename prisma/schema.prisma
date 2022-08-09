@@ -1,6 +1,11 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
+
+
 
 datasource db {
   provider = "postgresql"
@@ -13,11 +18,11 @@ model User {
   full_name  String
   profileURL String
 }
-
 model Show {
   id        Int     @id @default(autoincrement())
   title     String
   description   String
   location String
   artist String
+  imageURL String
 }
