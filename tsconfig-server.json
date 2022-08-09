@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react",
     "target": "es6",
     "module": "commonjs",
     "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
     "skipLibCheck": true,
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "./server/dist",
     "moduleResolution": "node",
     "removeComments": true,
     "noImplicitAny": true,
@@ -24,9 +23,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "composite": true,
-    "rootDir": ".",
-    "types": ["react/next", "react-dom/next", "react/experimental"],
+    "rootDir": "."
   },
   "exclude": ["node_modules"],
-  "include": ["./*.tsx", "./*.ts", "./components/*.tsx", "./components/*.ts", "./page/*.tsx", "./page/*.ts"]
+  "include": ["./server/src/**/*.tsx", "./server/src/**/*.ts"]
 }

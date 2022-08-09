@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node -r esm ./server/dist/index.js",
     "dev": "nodemon -r esm ./server/dist/index.js",
+    "serverBuild": "tsc --p tsconfig-server.json -w",
     "build": "tsc --build -w",
     "lint": "eslint ."
   },
